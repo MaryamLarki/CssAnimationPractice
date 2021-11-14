@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.sky{
+    position: relative;
+    background: lightskyblue;
+    height: 40%;
+}
+
+.grass{
+    background: #2e8b57;
+    height: 30%;
+}
+
+.road{
+    position: relative;
+    background: #696969;
+    height: 30%;
+    border-top: 8px solid #808080;
+    border-bottom: 8px solid #808080;
+}
+
+.lines{
+    border: 4px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+
+.cloud:nth-child(1){
+    position: absolute;
+    top: 35%;
+    width: 250px;
+    opacity: 0.5;
+    animation: wind 80s infinite linear forwards;
+}
+
+.cloud:nth-child(2){
+    position: absolute;
+    top: 10%;
+    width: 350px;
+    animation: wind 70s infinite linear forwards;
+}
+
+.mario{
+    position: absolute;
+    top: 0%;
+    animation: drive 10s linear forwards infinite, jump 0.7s 3s ease, jump 0.7s 5s ease ;
+}
+
+.luigi{
+    position: absolute;
+    top: 55%;
+    animation: drive 8s linear forwards infinite alternate ;
+}
+
+/* KeyFrames */
+
+@keyframes wind{
+    from{ transform: translateX(-350px);}
+    to{ transform: translateX(1500px);}
+}
+
+@keyframes drive{
+    from{ transform: translateX(-200px);}
+    to{ transform: translateX(1300px);}
+}
+
+@keyframes jump{
+    0%{ top:0px}
+    50%{ top: -30px}
+    100%{ top:0px}
+    /* 0%{ transform: translateY(0px);}
+    50%{ transform: translateY(10px);}
+    100%{ transform: translateY(0px);} */
+}

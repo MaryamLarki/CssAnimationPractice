@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background: #222222 ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #333;
+}
+
+#pop-up{
+    position: relative;
+    top: 30%;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    animation: firstDrop 0.5s ease-out forwards, swing 1.7s 0.5s ease forwards;
+    transform-origin: 15px 15px;
+}
+
+.container{
+    background: #f0e4d4;
+    padding: 55px 30px 30px 30px;
+    position: absolute; 
+    top: 50px; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.logo{
+    max-width: 150px;
+    position: absolute;
+    top: -1px;
+    left: 35%;
+    z-index: 1;
+}
+
+h1{
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+p{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+input{
+    padding: 10px;
+    width: 180px;
+    font-size: 13px;
+    border:1px #333333 solid;
+    border-radius: 10px 0 0 10px;
+}
+
+button{
+    padding: 10px;
+    margin-left: -5px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    background-color: #333;
+    border:1px #333333 solid;
+    border-radius: 0 10px 10px 0;
+}
+
+.cross{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #ddd;
+    font-weight: 600;
+    background: #555555cb;
+    height: 19px;
+    width: 19px;
+    border-radius: 11px;
+    text-align: center;
+}
+
+/* KeyFrames */
+
+@keyframes drop{
+    0%{transform: translateY(-490px); opacity: 0;}
+    70%{transform: translateY(50px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes firstDrop{
+    0%{transform: translateY(-490px);}
+    70%{transform: translateY(-100px);}
+    100%{transform: translateY(-190px) ;}
+}
+
+@keyframes swing{
+    0%{transform: translateY(-190px) rotateZ(0deg);}
+    40%{transform: translateY(-190px) rotateZ(90deg);}
+    70%{transform: translateY(-190px) rotateZ(45deg);}
+    100%{transform: translateY(-190px) rotateZ(60deg);}
+}
+
+/* @keyframes secondDrop {
+    0%{transform: translateY(-190px) rotateZ(60deg);}    
+} */
