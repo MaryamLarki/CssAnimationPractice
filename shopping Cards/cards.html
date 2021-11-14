@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+    <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/salomon.png" alt="Salomon Logo">
+        <img class="basket" src="img/add-to-basket.png" alt="Add To Basket">
+    </header>
+
+    <div class="container">
+        <h1>Women's Hiking Shoes</h1>
+
+        <ul class="cards">
+            <li>
+                <img class="front" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41293000_2fph8ienbi46diix.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=600" alt="QUEST 4 GORE-TEX">
+                <img class="back" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41293000_10_dxpvq0ud1grbdhgz.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=500" alt="QUEST 4 GORE-TEX">
+                <h2>QUEST 4 GORE-TEX</h2>
+                <button>Add To Bag</button>
+            </li>
+            <li>
+                <img class="front" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l40129600_9avskthg2e8fd1zi.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=600" alt="X ULTRA 3 WIDE MID GORE-TEX">
+                <img class="back" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l40129600_10_ai512l5owqhijg8l.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=500" alt="X ULTRA 3 WIDE MID GORE-TEX">
+                <h2>X ULTRA 3 WIDE MID GORE-TEX</h2>
+                <button>Add To Bag</button>
+            </li>
+            <li>
+                <img class="front" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41129900_gqjn3jssu6myg5zd.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=600" alt="QUEST PRIME GTX W">
+                <img class="back" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41129900_10_ghsbpnb6w5nrgktr.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=500" alt="QUEST PRIME GTX W">
+                <h2>QUEST PRIME GTX W</h2>
+                <button>Add To Bag</button>
+            </li>
+            <li>
+                <img class="front" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41274800_ckjwncwuzd0wboot.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=600" alt="XA PRO 3D v8 GORE-TEX">
+                <img class="back" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41274800_20_j7fazucte3rz6q4x.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=500" alt="XA PRO 3D v8 GORE-TEX">
+                <h2>XA PRO 3D v8 GORE-TEX</h2>
+                <button>Add To Bag</button>
+            </li>
+            <li>
+                <img class="front" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l40996600_j1war31rlus4eims.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=600" alt="OUTLINE">
+                <img class="back" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l40996600_5_4ubnarh4hqvbll2r.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=500" alt="OUTLINE">
+                <h2>OUTLINE</h2>
+                <button>Add To Bag</button>
+            </li>
+            <li>
+                <img class="front" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41452900_4rwuabxe3vha6z7e.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=600" alt="X ULTRA 4 GORE-TEX">
+                <img class="back" src="https://www.salomon.com/en-us/shop/media/catalog/product/l/4/l41452900_10_ybylxvqhybwpus9a.jpg?dpr=3&fit=cover&orient=1&quality=80&optimize=high&format=pjpg&auto=webp&width=500" alt="X ULTRA 4 GORE-TEX">
+                <h2>X ULTRA 4 GORE-TEX</h2>
+                <button>Add To Bag</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $("button").on("click", function(){
+          $(this).closest("li")
+            .find("img")
+            .clone()
+            .addClass("zoom")
+            .appendTo("body")
+          setTimeout(function(){
+            $(".zoom").remove();
+          }, 1000)
+        })
+      </script>
+</body>
+</html>
