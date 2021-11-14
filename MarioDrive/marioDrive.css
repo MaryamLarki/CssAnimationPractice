@@ -6,6 +6,8 @@
 html, body{
     height: 100%;
     width: 100%;
+    overflow: hidden;
+    margin: 0;
 }
 
 .sky{
@@ -38,7 +40,7 @@ html, body{
 .cloud:nth-child(1){
     position: absolute;
     top: 35%;
-    width: 250px;
+    width: 150px;
     opacity: 0.5;
     animation: wind 80s infinite linear forwards;
 }
@@ -46,31 +48,33 @@ html, body{
 .cloud:nth-child(2){
     position: absolute;
     top: 10%;
-    width: 350px;
+    width: 250px;
     animation: wind 70s infinite linear forwards;
 }
 
 .mario{
     position: absolute;
     top: 0%;
-    animation: drive 10s linear forwards infinite, jump 0.7s 3s ease, jump 0.7s 5s ease ;
+    width: 60px;
+    animation: drive 10s linear forwards infinite, jump 0.7s 2s ease, jump 0.7s 6s ease ;
 }
 
 .luigi{
     position: absolute;
-    top: 55%;
+    top: 53%;
+    width: 60px;
     animation: drive 8s linear forwards infinite alternate ;
 }
 
 /* KeyFrames */
 
 @keyframes wind{
-    from{ transform: translateX(-350px);}
+    from{ transform: translateX(-250px);}
     to{ transform: translateX(1500px);}
 }
 
 @keyframes drive{
-    from{ transform: translateX(-200px);}
+    from{ transform: translateX(-50px);}
     to{ transform: translateX(1300px);}
 }
 
@@ -78,7 +82,4 @@ html, body{
     0%{ top:0px}
     50%{ top: -30px}
     100%{ top:0px}
-    /* 0%{ transform: translateY(0px);}
-    50%{ transform: translateY(10px);}
-    100%{ transform: translateY(0px);} */
 }
