@@ -35,8 +35,10 @@ h1{
 }
 
 ul.cards{
+    max-width: 1070px;
+    width: 100%;
     list-style-type: none;
-    margin: 20px;
+    margin: 20px auto;
     display: flex;
     flex: 1 0 100px;
     flex-flow:row wrap;
@@ -53,8 +55,20 @@ li{
     max-width: 250px;
 }
 
-img.front{
+.cards img.front{
     position: absolute;
+}
+
+.cards img.back{
+    transform: rotateY(90deg);
+}
+
+.cards li:hover img.front{
+    animation: twirl 0.2s ease-in forwards;
+}
+
+.cards li:hover img.back{
+    animation: twirl 0.2s 0.2s ease-out forwards reverse;
 }
 
 .cards h2{
@@ -62,4 +76,24 @@ img.front{
     margin: 10px auto;
     font-size: 18px;
     font-weight: 500;
+}
+
+.cards button{
+    padding: 10px 30px;
+    background: #000;
+    border: hidden;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cards button:hover{
+    background: rgb(46, 46, 46);
+}
+
+/* KeyFrames */
+
+@keyframes twirl {
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(90deg);}
 }
