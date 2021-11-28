@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -18,57 +22,57 @@ body{
 #pop-up{
     position: relative;
     top: 30%;
-    width: 500px;
+    width: 50rem;
     margin: 0 auto;
     text-align: center;
-    animation: firstDrop 0.5s ease-out forwards, swing 1.7s 0.5s ease forwards;
-    transform-origin: 15px 15px;
+    animation: firstDrop .5s ease-out forwards, swing 1.7s .5s ease forwards;
+    transform-origin: 1.5rem 1.5rem;
 }
 
 .container{
     background: #f0e4d4;
-    padding: 55px 30px 30px 30px;
+    padding: 5.5rem 3rem 3rem 3rem;
     position: absolute; 
-    top: 50px; 
+    top: 5rem; 
     width: 100%; 
     box-sizing: border-box;
 }
 
 .logo{
-    max-width: 150px;
+    max-width: 15rem;
     position: absolute;
-    top: -1px;
+    top: -0.1rem;
     left: 35%;
     z-index: 1;
 }
 
 h1{
-    margin: 10px 0;
-    letter-spacing: 1px;
+    margin: 1rem 0;
+    letter-spacing: .1rem;
 }
 
 p{
-    margin-top: 15px;
-    margin-bottom: 35px;
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
 }
 
 input{
-    padding: 10px;
-    width: 180px;
-    font-size: 13px;
+    padding: 1rem;
+    width: 18rem;
+    font-size: 1.3rem;
     border:1px #333333 solid;
-    border-radius: 10px 0 0 10px;
+    border-radius: 1rem 0 0 1rem;
 }
 
 button{
-    padding: 10px;
-    margin-left: -5px;
+    padding: 1rem;
+    margin-left: -0.5rem;
     color: #fff;
-    font-size: 13px;
+    font-size: 1.3rem;
     text-align: center;
     background-color: #333;
-    border:1px #333333 solid;
-    border-radius: 0 10px 10px 0;
+    border:.1rem #333333 solid;
+    border-radius: 0 1rem 1rem 0;
 }
 
 button:hover{
@@ -78,40 +82,36 @@ button:hover{
 
 .cross{
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 1.5rem;
+    left: 1.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 1.2rem;
     color: #ddd;
     font-weight: 600;
     background: #555555cb;
-    height: 19px;
-    width: 19px;
-    border-radius: 11px;
+    height: 1.9rem;
+    width: 1.9rem;
+    border-radius: 1.1rem;
     text-align: center;
 }
 
 /* KeyFrames */
 
 @keyframes drop{
-    0%{transform: translateY(-490px); opacity: 0;}
-    70%{transform: translateY(50px);}
-    100%{transform: translateY(0px);}
+    0%{transform: translateY(-49rem); opacity: 0;}
+    70%{transform: translateY(5rem);}
+    100%{transform: translateY(0);}
 }
 
 @keyframes firstDrop{
-    0%{transform: translateY(-490px);}
-    70%{transform: translateY(-100px);}
-    100%{transform: translateY(-190px) ;}
+    0%{transform: translateY(-49rem);}
+    70%{transform: translateY(-10rem);}
+    100%{transform: translateY(-19rem) ;}
 }
 
 @keyframes swing{
-    0%{transform: translateY(-190px) rotateZ(0deg);}
-    40%{transform: translateY(-190px) rotateZ(90deg);}
-    70%{transform: translateY(-190px) rotateZ(45deg);}
-    100%{transform: translateY(-190px) rotateZ(60deg);}
+    0%{transform: translateY(-19rem) rotateZ(0deg);}
+    40%{transform: translateY(-19rem) rotateZ(90deg);}
+    70%{transform: translateY(-19rem) rotateZ(45deg);}
+    100%{transform: translateY(-19rem) rotateZ(60deg);}
 }
-
-/* @keyframes secondDrop {
-    0%{transform: translateY(-190px) rotateZ(60deg);}    
-} */

@@ -1,6 +1,10 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 html, body{
@@ -25,13 +29,13 @@ html, body{
     position: relative;
     background: #696969;
     height: 30%;
-    border-top: 8px solid #808080;
-    border-bottom: 8px solid #808080;
+    border-top: .8rem solid #808080;
+    border-bottom: .8rem solid #808080;
 }
 
 .lines{
-    border: 4px dashed #fff;
-    height: 0px;
+    border: .4rem dashed #fff;
+    height: 0;
     width: 100%;
     position: absolute;
     top: 45%;
@@ -40,7 +44,7 @@ html, body{
 .cloud:nth-child(1){
     position: absolute;
     top: 35%;
-    width: 150px;
+    width: 15rem;
     opacity: 0.5;
     animation: wind 80s infinite linear forwards;
 }
@@ -48,38 +52,38 @@ html, body{
 .cloud:nth-child(2){
     position: absolute;
     top: 10%;
-    width: 250px;
+    width: 25rem;
     animation: wind 70s infinite linear forwards;
 }
 
 .mario{
     position: absolute;
     top: 0%;
-    width: 60px;
+    width: 6rem;
     animation: drive 10s linear forwards infinite, jump 0.7s 2s ease, jump 0.7s 6s ease ;
 }
 
 .luigi{
     position: absolute;
     top: 53%;
-    width: 60px;
+    width: 6rem;
     animation: drive 8s linear forwards infinite alternate ;
 }
 
 /* KeyFrames */
 
 @keyframes wind{
-    from{ transform: translateX(-250px);}
-    to{ transform: translateX(1500px);}
+    from{ transform: translateX(-25rem);}
+    to{ transform: translateX(150rem);}
 }
 
 @keyframes drive{
-    from{ transform: translateX(-50px);}
-    to{ transform: translateX(1300px);}
+    from{ transform: translateX(-5rem);}
+    to{ transform: translateX(130rem);}
 }
 
 @keyframes jump{
-    0%{ top:0px}
-    50%{ top: -30px}
-    100%{ top:0px}
+    0%{ top:0}
+    50%{ top: -3rem}
+    100%{ top:0}
 }
